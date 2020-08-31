@@ -1,8 +1,7 @@
 # Lambda Take Home Challenge - Week 1
 Task: CSS Grid Calculator  
 Design Spec:   
-<img src="assets/DesignSpec.png" width='300'>   
-[💻 Project Codebase 💻](https://github.com/MrT3313/Lambda_TakeHomeChallenge_Wk1)
+<img src="assets/DesignSpec.png" width='300'>
 
 ---
 ## Versions 
