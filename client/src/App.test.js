@@ -32,6 +32,6 @@ test('check for Hello World text', () => {
     const wrapper = render(<App />)
     // console.log(wrapper.debug())
 
-    const element = wrapper.queryByText(/hello world/i)
+    const element = wrapper.queryByText(/Hello World/i)
     expect(element).toBeTruthy()
 })

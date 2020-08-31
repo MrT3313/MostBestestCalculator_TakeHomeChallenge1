@@ -8,6 +8,12 @@ Design Spec:
 ## Versions 
 
 <details open>
+<summary>0.0.2 - Initial `< App />` Tests</summary>
+
+1. Renders w/o crashing
+2. queryByText => Hello World => toBeTruthy
+</details>
+<details >
 <summary>0.0.1 - Create React App</summary>
 
 - Cleaned out template CRA
