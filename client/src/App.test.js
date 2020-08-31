@@ -1,18 +1,3 @@
-// // IMPORTS
-// import React from 'react'
-// import { render } from '@testing-library/react'
-
-// // COMPONENTS
-// import { App } from './app.js'
-
-// if('Renders without crashing', () => {
-
-// })
-
-// -- -- -- -- -- -- -- -- //
-// -- -- -- -- -- -- -- -- //
-// -- -- -- -- -- -- -- -- //
-
 // IMPORTS
 import React from 'react'
 import { render, cleanup } from '@testing-library/react'
