@@ -22,6 +22,6 @@ Design Spec:
 --- 
 Author: Reed Turgeon  
 Email: Turgeon.dev@gmail.com  
-GitHub: https://github.com/MrT3313
+GitHub: https://github.com/MrT3313  
 LinkedIn: https://www.linkedin.com/in/reedturgeon/  
 
