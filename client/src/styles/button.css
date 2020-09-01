@@ -4,6 +4,7 @@
     display: grid;
     
     padding: var(--padding);
+    color: #FFFFFF;
     background-color: var(--defaultButton_Grey);
     border: 1px solid var(--text_and_line);
     border-radius: 5px;

@@ -7,9 +7,17 @@ Design Spec:
 ---
 ## Versions 
 <details open>
-<summary>0.0.4 - </summary>
+<summary>0.0.4 - CSS Grid Layout</summary>
 
-1. [HTML Entities](https://www.freeformatter.com/html-entities.html)
+1. `<ButtonContainer/>`    
+    - holds main CSS grid
+    - imports `<Button/>` & `<ActionButton>`
+        - `<Button/>` is rendering a passsed `num` prop
+        - `<ActionButton/>` is passed a text `type` which is filtered through a `switch` statement to render the [HTML Entities](https://www.freeformatter.com/html-entities.html)
+2. All components using project themes imported from `index.css`
+
+Screenshot:  
+<img src="client/src/assets/0.0.4.png" height='250'>
 </details>
 <details open>
 <summary>0.0.3 - CSS Reset & Color Variables</summary>
