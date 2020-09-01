@@ -19,7 +19,7 @@
 Screenshot:  
 <img src="client/src/assets/0.0.4.png" height='250'>
 </details>
-<details open>
+<details>
 <summary>0.0.3 - CSS Reset & Color Variables</summary>
 
 1. Meyer Reset: V2.0
