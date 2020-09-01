@@ -1,0 +1,15 @@
+@import './index.css';
+
+.ResultScreen { 
+    display: flex;
+    justify-content: flex-end;
+
+    border-top: 1px solid var(--text_and_line); 
+    border-right: 1px solid var(--text_and_line); 
+    border-left: 1px solid var(--text_and_line); 
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+
+    padding: var(--padding);
+    background-color: var(--background_LightGrey);
+}

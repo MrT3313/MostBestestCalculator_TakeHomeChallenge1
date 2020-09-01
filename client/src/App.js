@@ -2,16 +2,19 @@
 import React from 'react';
 
 // STYLES
-// import indexStyles from './styles/index.css'
 import './styles/app.css'
 
+// COMPONENTS
+import Calculator from './components/Calculator.js'
+
 // __MAIN__
-function App(props) {
+function App() {
   return (
     <div className="App">
-      Hello World
+      <Calculator />
     </div>
   );
 }
 
+// EXPORT
 export default App;

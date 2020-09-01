@@ -1,0 +1,23 @@
+@import './index.css';
+
+.Button {
+    display: grid;
+    
+    padding: var(--padding);
+    color: #FFFFFF;
+    background-color: var(--defaultButton_Grey);
+    border: 1px solid var(--text_and_line);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.clear {
+    background-color: var(--clearButton_Blue);
+    grid-column: span 3;
+}
+.zero {    
+    grid-column: span 3;
+}
+.equals { 
+    background-color: var(--equalButton_Green);
+}
