@@ -1,5 +1,5 @@
 // IMPORTS
-import React from 'react'
+import React, {useState} from 'react'
 
 // COMPONENTS
 import ResultScreen from './ResultScreen.js'
@@ -10,9 +10,12 @@ import '../styles/Calculator.css'
 
 // __MAIN__
 function Calculator() {
+    // State
+    const [result, setResult] = useState()
+    // Return
     return (
         <div className="Calculator">
-            <ResultScreen />
+            <ResultScreen result={result}/>
             <ButtonContainer />
         </div>
     )

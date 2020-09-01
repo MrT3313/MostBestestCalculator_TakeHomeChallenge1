@@ -6,7 +6,11 @@ Design Spec:
 
 ---
 ## Versions 
+<details open>
+<summary>0.0.4 - </summary>
 
+1. [HTML Entities](https://www.freeformatter.com/html-entities.html)
+</details>
 <details open>
 <summary>0.0.3 - CSS Reset & Color Variables</summary>
 

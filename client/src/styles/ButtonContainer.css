@@ -1,7 +1,10 @@
 @import './index.css';
 
 .ButtonContainer { 
-    display: flex;
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
 
     border: 1px solid var(--text_and_line); 
     border-bottom-right-radius: 5px;
