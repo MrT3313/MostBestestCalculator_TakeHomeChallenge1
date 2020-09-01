@@ -1,0 +1,26 @@
+@import './reset.css';
+
+html, body { 
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#root { 
+  height: 100%;
+}
+
+body {
+  font-size: 62.5%;
+}
+html {
+  box-sizing: border-box;
+}
+
+:root {
+  --background_LightGrey: #F3F3F3;
+  --clearButton_Blue: #3573DD;
+  --equalButton_Green: #27D15E;
+  --defaultButton_Grey: #767676;
+  --text_and_line: #52514F;
+}

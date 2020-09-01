@@ -1,7 +1,8 @@
 # Lambda Take Home Challenge - Week 1
-Task: CSS Grid Calculator  
+Task: CSS Grid Calculator
+[Problem - Scotch.io](https://scotch.io/bar-talk/code-challenge-2-build-a-calculator-with-css-grid) 
 Design Spec:   
-<img src="assets/DesignSpec.png" width='300'>
+<img src="client/src/assets/DesignSpec.png" width='300'>
 
 ---
 ## Versions 
