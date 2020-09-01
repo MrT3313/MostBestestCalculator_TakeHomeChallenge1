@@ -10,19 +10,23 @@ Design Spec:
 <details open>
 <summary>0.0.3 - CSS Reset & Color Variables</summary>
 
-    1. Meyer Reset: V2.0
-        http://meyerweb.com/eric/tools/css/reset/ 
-        v2.0 | 20110126
-        License: none (public domain)
-        
-    2. Color Variables  
-        :root {
-            --background_LightGrey: #F3F3F3;
-            --clearButton_Blue: #3573DD;
-            --equalButton_Green: #27D15E;
-            --defaultButton_Grey: #767676;
-            --text_and_line: #52514F;
-        }
+1. Meyer Reset: V2.0
+    ```
+    http://meyerweb.com/eric/tools/css/reset/ 
+    v2.0 | 20110126
+    License: none (public domain)
+    ```
+
+2. Color Variables
+    ```
+    :root {
+        --background_LightGrey: #F3F3F3;
+        --clearButton_Blue: #3573DD;
+        --equalButton_Green: #27D15E;
+        --defaultButton_Grey: #767676;
+        --text_and_line: #52514F;
+    }
+    ```
 </details>
 <details>
 <summary>0.0.2 - Initial `< App />` Tests</summary>
