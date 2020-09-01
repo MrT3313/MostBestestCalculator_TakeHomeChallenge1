@@ -13,7 +13,7 @@
     - holds main CSS grid
     - imports `<Button/>` & `<ActionButton>`
         - `<Button/>` is rendering a passsed `num` prop
-        - `<ActionButton/>` is passed a text `type` which is filtered through a `switch` statement to render the [HTML Entities](https://www.freeformatter.com/html-entities.html)
+        - `<ActionButton/>` is passed a text `type`  prop which is filtered through a `switch` statement to render the [HTML Entities](https://www.freeformatter.com/html-entities.html)
 2. All components using project themes imported from `index.css`
 
 Screenshot:  

@@ -12,11 +12,18 @@ import '../styles/Calculator.css'
 function Calculator() {
     // State
     const [result, setResult] = useState()
+    const [history, setHistory] = useState('')
     // Return
     return (
         <div className="Calculator">
-            <ResultScreen result={result}/>
-            <ButtonContainer />
+            <ResultScreen 
+                result={result}
+                history={history}
+            />
+            <ButtonContainer 
+                history={history}
+                setHistory={setHistory}
+            />
         </div>
     )
 }

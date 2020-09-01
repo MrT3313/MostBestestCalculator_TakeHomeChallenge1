@@ -1,11 +1,14 @@
 // IMPORTS
 import React, {useState, useEffect} from 'react'
 
+// COMPONENTS
+import History from './History.js'
+
 // STYLES
 import '../styles/ResultScreen.css'
 
 // __MAIN__
-function ResultScreen({result}) {
+function ResultScreen({result, history}) {
     // State
     const [value, setValue] = useState(0)
     // UseEffect
@@ -17,7 +20,10 @@ function ResultScreen({result}) {
     // RETURN
     return (
         <div className='ResultScreen'>
-            {value}
+            <History history={history}/>
+            <div>
+                {value}
+            </div>
         </div>
     )
 }

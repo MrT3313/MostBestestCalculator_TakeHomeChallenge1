@@ -4,8 +4,11 @@
     display: grid;
     
     padding: var(--padding);
-    color: #FFFFFF;
     background-color: var(--defaultButton_Grey);
+    
+    font-size: 1.25rem;
+    color: #FFFFFF;
+    
     border: 1px solid var(--text_and_line);
     border-radius: 5px;
     cursor: pointer;
