@@ -1,0 +1,9 @@
+@import './index.css';
+
+.App {
+    display: flex;
+    height: 100%;
+
+    font-size: 1rem;
+    background-color: var(--background_LightGrey);
+}
