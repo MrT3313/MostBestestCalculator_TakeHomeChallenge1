@@ -1,0 +1,11 @@
+@import './index.css';
+
+.ButtonContainer { 
+    display: flex;
+
+    border: 1px solid var(--text_and_line); 
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+
+    padding: var(--padding);
+}
