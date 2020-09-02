@@ -9,10 +9,14 @@
 <details open>
 <summary>0.1.0 - Calculation Logic</summary>
 
-1. `<Calculator />`
+While the `scotch.io` challenge only asks to create the calculator layout using `CSS Grid` I chose to add the actual calculation functionality! To do this I used React Hooks to add & track the state of a users calculations.  
+
+1. Added `<History />` component to `<ResultScreen />`
+    - Tracks button clicks through the `history` state prior to calculation
+2. `<Calculator />`
     - `result` & `history` state being passed to `<ResultScreen />`
     -  `result`, `setResult` & `history`, `setHistory` state being passed to `<ButtonContainer />` 
-2. `<ButtonContainer />` holds all calculation logic
+3. `<ButtonContainer />` holds all calculation logic
     - `clear` => Resets `history` & `result` state 
     - `click` => Updates `history` state string
     - `calculate` => uses Javascript `eval()` to: 
@@ -20,8 +24,10 @@
         2. Update `result` state
         3. Reset `history` state
 </details>
-<details>
+<details open>
 <summary>0.0.4 - CSS Grid Layout</summary>
+
+**Challenge Complete**
 
 1. `<ButtonContainer/>`    
     - holds main CSS grid
