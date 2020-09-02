@@ -15,24 +15,27 @@ function ButtonContainer(
     }
 ) {
     // Methods
+    // - 1 - //
+    const clear = () => {
+        setResult(false)
+        setHistory(``)
+    }
+
+    // - 2 - //
     const click = (item) => {
         // Variables
         const operations = ['*','-','/','+']
 
-        // Edge Case(s)
-        if (
-            operations.includes(history.charAt(history.length - 1)) &&
-            operations.includes(item)
-        ) {
-            return
-        }
+        // Edge Case
         if (
             history.charAt(history.length - 1) === '/' &&
             item === 0
         ) {
+            setHistory(history.slice(0, -1))
             alert('Unable to divide by 0')
             return
         }
+
         // Main Logic
         if (
             history === `` && !result && !operations.includes(item)
@@ -41,7 +44,14 @@ function ButtonContainer(
         } else if (
             history !== ``
         ) { // Entry #2+
-            setHistory(`${history}${item}`)
+            if (
+                operations.includes(history.charAt(history.length - 1)) &&
+                operations.includes(item)
+            ) { // Back to back operations entered
+                return
+            } else {
+                setHistory(`${history}${item}`)
+            }
         } else if (
             history === `` && result
         ) { // Extend Result 
@@ -55,12 +65,10 @@ function ButtonContainer(
             }
         }
     }
-    const clear = () => {
-        setResult()
-        setHistory(``)
-    }
+
+    // - 3 - //
     const calculate = (hist) => {
-        // Calculate
+        // Calculate & Set Result
         const result = eval(hist)
         setResult(result)
 

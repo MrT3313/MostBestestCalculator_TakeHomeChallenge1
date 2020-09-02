@@ -12,7 +12,7 @@ import '../styles/Calculator.css'
 function Calculator() {
     // State
     const [result, setResult] = useState(false)
-    const [history, setHistory] = useState('')
+    const [history, setHistory] = useState(``)
     // Return
     return (
         <div className="Calculator">

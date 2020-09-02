@@ -7,6 +7,20 @@
 ---
 ## Versions 
 <details open>
+<summary>0.1.0 - Calculation Logic</summary>
+
+1. `<Calculator />`
+    - `result` & `history` state being passed to `<ResultScreen />`
+    -  `result`, `setResult` & `history`, `setHistory` state being passed to `<ButtonContainer />` 
+2. `<ButtonContainer />` holds all calculation logic
+    - `clear` => Resets `history` & `result` state 
+    - `click` => Updates `history` state string
+    - `calculate` => uses Javascript `eval()` to: 
+        1. Calculate result from passed `history` state 
+        2. Update `result` state
+        3. Reset `history` state
+</details>
+<details>
 <summary>0.0.4 - CSS Grid Layout</summary>
 
 1. `<ButtonContainer/>`    
