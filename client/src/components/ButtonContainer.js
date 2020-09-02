@@ -9,23 +9,63 @@ import ActionButton from './ActionButton.js'
 import '../styles/ButtonContainer.css'
 
 // __MAIN__
-function ButtonContainer({history, setHistory}) {
+function ButtonContainer(
+    {   history, setHistory, 
+        result, setResult   
+    }
+) {
     // Methods
     const click = (item) => {
-        console.log(`Button ${item} Button Clicked`)
-        setHistory(`${history}${item}`)
+        // Variables
+        const operations = ['*','-','/','+']
+
+        // Edge Case(s)
+        if (
+            operations.includes(history.charAt(history.length - 1)) &&
+            operations.includes(item)
+        ) {
+            return
+        }
+        if (
+            history.charAt(history.length - 1) === '/' &&
+            item === 0
+        ) {
+            alert('Unable to divide by 0')
+            return
+        }
+        // Main Logic
+        if (
+            history === `` && !result && !operations.includes(item)
+        ) { // Entry #1
+            setHistory(`${item}`)
+        } else if (
+            history !== ``
+        ) { // Entry #2+
+            setHistory(`${history}${item}`)
+        } else if (
+            history === `` && result
+        ) { // Extend Result 
+            if (
+                !operations.includes(history.charAt(history.length - 1)) &&
+                !operations.includes(item)
+            ) { // Back to back operations entered
+                return
+            } else {
+                setHistory(`${result}${item}`)
+            }
+        }
     }
     const clear = () => {
+        setResult()
         setHistory(``)
     }
     const calculate = (hist) => {
-        console.log(`We need to calculate ${hist}`)
-
         // Calculate
+        const result = eval(hist)
+        setResult(result)
 
         // Clear History
         setHistory(``)
-        // Show Result
     }
 
     // Return
