@@ -88,26 +88,26 @@ function ButtonContainer(
     // Return
     return (
         <div className='ButtonContainer'>
-            <ActionButton operation={['C', ]} onClick={clear}/>
-            <ActionButton operation={['/', divide]} onClick={onClick}/>
+            <ActionButton operation={['clear', 'C', ]} onClick={clear}/>
+            <ActionButton operation={['divide', '/', divide]} onClick={onClick}/>
 
             <Button num={7} onClick={onClick}/>
             <Button num={8} onClick={onClick}/>
             <Button num={9} onClick={onClick}/>
-            <ActionButton operation={['*', multiply]} onClick={onClick}/>
+            <ActionButton operation={['multiply', '*', multiply]} onClick={onClick}/>
 
             <Button num={4} onClick={onClick}/>
             <Button num={5} onClick={onClick}/>
             <Button num={6} onClick={onClick}/>
-            <ActionButton operation={['-', minus]} onClick={onClick}/>
+            <ActionButton operation={['subtract', '-', minus]} onClick={onClick}/>
 
             <Button num={1} onClick={onClick}/>
             <Button num={2} onClick={onClick}/>
             <Button num={3} onClick={onClick}/>
-            <ActionButton operation={['+', plus]} onClick={onClick}/>
+            <ActionButton operation={['add', '+', plus]} onClick={onClick}/>
 
             <Button num={0} onClick={onClick}/>
-            <ActionButton operation={['=', equal]} onClick={() => calculate(history)}/>
+            <ActionButton operation={['equals', '=', equal]} onClick={() => calculate(history)}/>
         </div>
     )
 }
