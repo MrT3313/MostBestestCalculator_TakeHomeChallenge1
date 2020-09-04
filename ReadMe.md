@@ -28,7 +28,7 @@ Today I presented this weeks project to two of Lambda School's engineers as well
 3. Dynamic class names
     - While rendering the appropriate `HTML entity` and passing of the appropriate `symbol` to the `click()` function was the **main** reason that caused the duplicate code in the `<ActionButton />` it was highlighted that if I passed better props I could also dynamically create my class names. This was **very** obvious when I looked back at the `<Button />` component ... which had an entire switch statement to catch the `0` button so the CSS could have it span 3 columns ... UPDATED!
 
-4. In responsing to my comment about not having a 'views' directory it was suggested that, because this is a small project, it might not be needed and that instead I could change my `components` directory into a `calculator` directory and my `Calculator.js` file into an `index.js` file in in order to signify the 'entry' into the app. So I did!
+4. In responsing to my comment about not having a 'views' directory it was suggested that, because this is a small project, it might not be needed and that instead I could change my `components` directory into a `calculator` directory and my `Calculator.js` file into an `index.js` file in order to signify the 'entry' into the app. So I did!
 
 Thanks to Garrett & Matt (the Lambda Engineers) for making this happen!
 
