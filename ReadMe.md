@@ -68,7 +68,7 @@ While the `scotch.io` challenge only asks to create the calculator layout using 
 2. All components using project themes imported from `index.css`
 
 Screenshot:  
-<img src="client/src/assets/0.0.4.png" height='250'>
+<img src="client/src/assets/ReadMe/0.0.4.png" height='250'>
 </details>
 <details>
 <summary>0.0.3 - CSS Reset & Color Variables</summary>
