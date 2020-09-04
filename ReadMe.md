@@ -18,7 +18,7 @@
 <details open>
 <summary>0.1.1 - Post Project Presentation Update</summary>
 
-Today I presented this weeks project to two of Lambda school's engineers as well as some other students. After I walked through the project they had some feedback which I have encorporated into this update! 
+Today I presented this weeks project to two of Lambda School's engineers as well as some other students. After I walked through the project they had some feedback which I have encorporated into this update! 
 
 1. Prior to the presentation I added a `netlify.toml` file and deployed a version of my `dev` branch for people who were at the presentation to access 
 
