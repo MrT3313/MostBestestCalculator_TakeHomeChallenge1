@@ -2,6 +2,7 @@
 
 .Button {
     display: grid;
+    align-items: center;
     
     padding: var(--padding);
     background-color: var(--defaultButton_Grey);

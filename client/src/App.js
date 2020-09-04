@@ -5,7 +5,7 @@ import React from 'react';
 import './styles/app.css'
 
 // COMPONENTS
-import Calculator from './components/Calculator.js'
+import Calculator from './Calculator/index.js'
 
 // __MAIN__
 function App() {

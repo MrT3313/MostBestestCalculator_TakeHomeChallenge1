@@ -4,8 +4,39 @@
 - Design Spec:   
 <img src="client/src/assets/DesignSpec.png" width='300'>
 
+# Assets
+| name | source | author | 
+| ---  | ---    | ---    |
+| [plus](https://www.flaticon.com/free-icon/add_1237946?term=plus&page=1&position=1) | flaticon.com | [srip](https://www.flaticon.com/authors/srip) | 
+| [minus](https://www.flaticon.com/free-icon/minus_1828901?term=minus&page=1&position=2) | flaticon.com | [Pixel Perfect](https://www.flaticon.com/authors/pixel-perfect) | 
+| [multiply](https://www.flaticon.com/free-icon/multiply-mathematical-sign_43823?term=multiply&page=1&position=2) | flaticon.com | [Freepik](https://www.flaticon.com/authors/freepik) |
+| [divide](https://www.flaticon.com/free-icon/divide_43097?term=divide&page=1&position=1) | flaticon.com | [Freepik](https://www.flaticon.com/authors/freepik) |
+| [equal](https://www.flaticon.com/free-icon/equal_56751?term=equal%20sign&page=1&position=9) | flaticon.com | [Freepik](https://www.flaticon.com/authors/freepik) |
+
 ---
-## Versions 
+
+<details open>
+<summary>0.1.1 - Post Project Presentation Update</summary>
+
+Today I presented this weeks project to two of Lambda school's engineers as well as some other students. After I walked through the project they had some feedback which I have encorporated into this update! 
+
+1. Prior to the presentation I added a `netlify.toml` file and deployed a version of my `dev` branch for people who were at the presentation to access 
+
+2. Update `<ActionButton />` to accept more appropraite props and be more dynamic 
+    - Previously: I was passing a `type` string prop from `<ButtonContainer />` to `<ActionButton />`. This prop was filtered through a switch statement to render different JSX with the corresponding `HTML Entity` and pass the appropriate symbol into into the `click()` function
+    - Update: 
+        1. I am now passing an `operation` array prop that contains a symbol and the corresponding SVG icon to be rendered. This allows the `<ActionButton />` to dynamically render everything in one JSX return.
+
+3. Dynamic class names
+    - While it was the passing of the appropriate symbol to the `click()` function and the rendering of the `HTML entity` was the **main** reason that caused the duplicate code in the `<ActionButton />` it was highlighted that if I passed better props I could use dynamically make my class names. This was **very** obvious when I looked back at the `<Button />` component ... which had an entire switch statement to catch the `0` button so the CSS could have it span 3 columns ... UPDATED!
+        
+
+4. In responsing to my comment about not having a 'views' directory it was suggested that, because this is a small project, it might not be needed and that instead I could change my `components` directory into a `calculator` directory and my `Calculator.js` file into an `index.js` file in to signify the 'entry' into the app. So I did!  
+
+Next Up: Improved Testing! 
+
+</details>
+
 <details open>
 <summary>0.1.0 - Calculation Logic</summary>
 
