@@ -36,7 +36,7 @@ Next Up: Improved Testing!
 
 </details>
 
-<details open>
+<details>
 <summary>0.1.0 - Calculation Logic</summary>
 
 While the `scotch.io` challenge only asks to create the calculator layout using `CSS Grid` I chose to add the actual calculation functionality! To do this I used `React Hooks` to add & track the state of a user's calculations.  
