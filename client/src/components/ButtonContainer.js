@@ -1,3 +1,5 @@
+/* eslint no-eval: 0 */
+
 // IMPORTS
 import React from 'react'
 
