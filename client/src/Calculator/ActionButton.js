@@ -6,6 +6,7 @@ import '../styles/button.css'
 
 // __MAIN__
 function ActionButton({operation, onClick}) {
+    // operation prop: [symbol, svg]
     return (
         <button 
             className={

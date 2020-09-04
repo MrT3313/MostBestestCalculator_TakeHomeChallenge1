@@ -2,7 +2,7 @@
 - Task: CSS Grid Calculator  
 - [Problem Link - Scotch.io](https://scotch.io/bar-talk/code-challenge-2-build-a-calculator-with-css-grid)   
 - Design Spec:   
-<img src="client/src/assets/DesignSpec.png" width='300'>
+<img src="client/src/assets/ReadMe/DesignSpec.png" width='300'>
 
 # Assets
 | name | source | author | 
@@ -22,15 +22,16 @@ Today I presented this weeks project to two of Lambda school's engineers as well
 
 1. Prior to the presentation I added a `netlify.toml` file and deployed a version of my `dev` branch for people who were at the presentation to access 
 
-2. Update `<ActionButton />` to accept more appropraite props and be more dynamic 
-    - Previously: I was passing a `type` string prop from `<ButtonContainer />` to `<ActionButton />`. This prop was filtered through a switch statement to render different JSX with the corresponding `HTML Entity` and pass the appropriate symbol into into the `click()` function
-    - Update: I am now passing an `operation` array prop that contains a symbol and the corresponding SVG icon to be rendered. This allows the `<ActionButton />` to dynamically render everything in one JSX return.
+2. Update `<ActionButton />` to accept more appropraite props in order to be more dynamic 
+    - Previously: I was passing a `type` string prop from `<ButtonContainer />` to `<ActionButton />`. This prop was filtered through a switch statement to render different `JSX` with the corresponding `HTML Entity` and pass the appropriate symbol into into the `click()` function
+    - Update: I am now passing an `operation` array prop that contains a symbol and the corresponding SVG icon to be rendered. This allows the `<ActionButton />` to dynamically render everything in one `JSX` return.
 
 3. Dynamic class names
-    - While it was the passing of the appropriate symbol to the `click()` function and the rendering of the `HTML entity` was the **main** reason that caused the duplicate code in the `<ActionButton />` it was highlighted that if I passed better props I could use dynamically make my class names. This was **very** obvious when I looked back at the `<Button />` component ... which had an entire switch statement to catch the `0` button so the CSS could have it span 3 columns ... UPDATED!
-        
+    - While rendering the appropriate `HTML entity` and passing of the appropriate `symbol` to the `click()` function was the **main** reason that caused the duplicate code in the `<ActionButton />` it was highlighted that if I passed better props I could also dynamically create my class names. This was **very** obvious when I looked back at the `<Button />` component ... which had an entire switch statement to catch the `0` button so the CSS could have it span 3 columns ... UPDATED!
 
-4. In responsing to my comment about not having a 'views' directory it was suggested that, because this is a small project, it might not be needed and that instead I could change my `components` directory into a `calculator` directory and my `Calculator.js` file into an `index.js` file in to signify the 'entry' into the app. So I did!  
+4. In responsing to my comment about not having a 'views' directory it was suggested that, because this is a small project, it might not be needed and that instead I could change my `components` directory into a `calculator` directory and my `Calculator.js` file into an `index.js` file in in order to signify the 'entry' into the app. So I did!
+
+Thanks to Garrett & Matt (the Lambda Engineers) for making this happen!
 
 Next Up: Improved Testing! 
 
