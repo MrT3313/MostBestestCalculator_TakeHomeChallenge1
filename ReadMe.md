@@ -24,8 +24,7 @@ Today I presented this weeks project to two of Lambda school's engineers as well
 
 2. Update `<ActionButton />` to accept more appropraite props and be more dynamic 
     - Previously: I was passing a `type` string prop from `<ButtonContainer />` to `<ActionButton />`. This prop was filtered through a switch statement to render different JSX with the corresponding `HTML Entity` and pass the appropriate symbol into into the `click()` function
-    - Update: 
-        1. I am now passing an `operation` array prop that contains a symbol and the corresponding SVG icon to be rendered. This allows the `<ActionButton />` to dynamically render everything in one JSX return.
+    - Update: I am now passing an `operation` array prop that contains a symbol and the corresponding SVG icon to be rendered. This allows the `<ActionButton />` to dynamically render everything in one JSX return.
 
 3. Dynamic class names
     - While it was the passing of the appropriate symbol to the `click()` function and the rendering of the `HTML entity` was the **main** reason that caused the duplicate code in the `<ActionButton />` it was highlighted that if I passed better props I could use dynamically make my class names. This was **very** obvious when I looked back at the `<Button />` component ... which had an entire switch statement to catch the `0` button so the CSS could have it span 3 columns ... UPDATED!
