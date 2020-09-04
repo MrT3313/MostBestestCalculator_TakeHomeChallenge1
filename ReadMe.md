@@ -13,8 +13,6 @@
 | [divide](https://www.flaticon.com/free-icon/divide_43097?term=divide&page=1&position=1) | flaticon.com | [Freepik](https://www.flaticon.com/authors/freepik) |
 | [equal](https://www.flaticon.com/free-icon/equal_56751?term=equal%20sign&page=1&position=9) | flaticon.com | [Freepik](https://www.flaticon.com/authors/freepik) |
 
----
-
 # Versions
 <details open>
 <summary>0.1.1 - Post Project Presentation Update</summary>
