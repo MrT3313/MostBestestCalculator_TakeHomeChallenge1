@@ -1,9 +1,18 @@
+/* eslint no-eval: 0 */
+
 // IMPORTS
 import React from 'react'
 
 // COMPONENTS
 import Button from './Button.js'
 import ActionButton from './ActionButton.js'
+
+// ICONS
+import divide from '../assets/mathSymbols/divide.svg'
+import multiply from '../assets/mathSymbols/multiply.svg'
+import plus from '../assets/mathSymbols/plus.svg'
+import minus from '../assets/mathSymbols/minus.svg'
+import equal from '../assets/mathSymbols/equal.svg'
 
 // STYLES
 import '../styles/ButtonContainer.css'
@@ -22,7 +31,7 @@ function ButtonContainer(
     }
 
     // - 2 - //
-    const click = (item) => {
+    const onClick = (item) => {
         // Variables
         const operations = ['*','-','/','+']
 
@@ -79,26 +88,26 @@ function ButtonContainer(
     // Return
     return (
         <div className='ButtonContainer'>
-            <ActionButton type='clear' click={clear}/>
-            <ActionButton type='divide' click={click}/>
+            <ActionButton operation={['C', ]} onClick={clear}/>
+            <ActionButton operation={['/', divide]} onClick={onClick}/>
 
-            <Button num={7} click={click}/>
-            <Button num={8} click={click}/>
-            <Button num={9} click={click}/>
-            <ActionButton type={'multiply'} click={click}/>
+            <Button num={7} onClick={onClick}/>
+            <Button num={8} onClick={onClick}/>
+            <Button num={9} onClick={onClick}/>
+            <ActionButton operation={['*', multiply]} onClick={onClick}/>
 
-            <Button num={4} click={click}/>
-            <Button num={5} click={click}/>
-            <Button num={6} click={click}/>
-            <ActionButton type={'subtract'} click={click}/>
+            <Button num={4} onClick={onClick}/>
+            <Button num={5} onClick={onClick}/>
+            <Button num={6} onClick={onClick}/>
+            <ActionButton operation={['-', minus]} onClick={onClick}/>
 
-            <Button num={1} click={click}/>
-            <Button num={2} click={click}/>
-            <Button num={3} click={click}/>
-            <ActionButton type={'add'} click={click}/>
+            <Button num={1} onClick={onClick}/>
+            <Button num={2} onClick={onClick}/>
+            <Button num={3} onClick={onClick}/>
+            <ActionButton operation={['+', plus]} onClick={onClick}/>
 
-            <Button num={0} click={click}/>
-            <ActionButton type={'equals'} click={() => calculate(history)}/>
+            <Button num={0} onClick={onClick}/>
+            <ActionButton operation={['=', equal]} onClick={() => calculate(history)}/>
         </div>
     )
 }
