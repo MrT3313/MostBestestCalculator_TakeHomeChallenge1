@@ -8,9 +8,10 @@ import Button from './Button.js'
 import ActionButton from './ActionButton.js'
 
 // FUNCTIONS
-import { CHECK_divideByZero } from '../utils/CHECK_divideByZero.js'
-import { CHECK_firstEntry } from '../utils/CHECK_firstEntry.js'
-import { CHECK_secondPlusEntry } from '../utils/CHECK_secondPlusEntry.js'
+// import { CHECK_divideByZero } from '../utils/CHECK_divideByZero.js'
+// import { CHECK_firstEntry } from '../utils/CHECK_firstEntry.js'
+// import { CHECK_secondPlusEntry } from '../utils/CHECK_secondPlusEntry.js'
+import { updateHistory } from '../utils/updateHistory.js'
 
 // ICONS
 import divide from '../assets/mathSymbols/divide.svg'
@@ -40,51 +41,7 @@ function ButtonContainer(
         // Variables
         const operations = ['*','-','/','+']
 
-        // Edge Case
-        if(
-            CHECK_divideByZero(history, item)
-        ) {
-            setHistory(history.slice(0, -1))
-            alert('Unable to divide by 0')
-            return
-        }
-
-        // Entry #1
-        if(
-            CHECK_firstEntry(item, history, result, operations)
-        ) { 
-            setHistory(`${item}`)
-            return
-        } 
-        
-        // Entry #2+
-        if (
-            history !== ``
-        ) { 
-            if (
-                CHECK_secondPlusEntry(item, history, operations)
-            ) {
-                setHistory(`${history}${item}`)
-                return
-            } else {
-                return
-            }
-        } 
-        
-        // Extend Result 
-        if (
-            history === `` && result
-        ) { 
-            if (
-                !operations.includes(history.charAt(history.length - 1)) &&
-                !operations.includes(item)
-            ) { // Back to back operations entered
-                return
-            } else {
-                setHistory(`${result}${item}`)
-            }
-            return
-        }
+        updateHistory( item, history, setHistory, result)
     }
 
     // - 3 - //
