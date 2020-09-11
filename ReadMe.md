@@ -22,7 +22,9 @@ TODO:
 <details open>
 <summary>0.2.0 - Testing Update</summary>
 
-- 
+1. `<App />` => Renders w/o crashing
+2. `<History />` => Initial textContent === `''`
+3. `<ResultScreen />` => Initial textContent == `'0'`
 </details>
 <details open>
 <summary>0.1.1 - Post Project Presentation Update</summary>

@@ -7,6 +7,9 @@ import React from 'react'
 import Button from './Button.js'
 import ActionButton from './ActionButton.js'
 
+// FUNCTIONS
+import { divideByZero } from '../utils/divideByZero.js'
+
 // ICONS
 import divide from '../assets/mathSymbols/divide.svg'
 import multiply from '../assets/mathSymbols/multiply.svg'
@@ -36,10 +39,7 @@ function ButtonContainer(
         const operations = ['*','-','/','+']
 
         // Edge Case
-        if (
-            history.charAt(history.length - 1) === '/' &&
-            item === 0
-        ) {
+        if(!divideByZero(history, item)) {
             setHistory(history.slice(0, -1))
             alert('Unable to divide by 0')
             return
