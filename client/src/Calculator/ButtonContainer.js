@@ -8,7 +8,9 @@ import Button from './Button.js'
 import ActionButton from './ActionButton.js'
 
 // FUNCTIONS
-import { divideByZero } from '../utils/divideByZero.js'
+import { CHECK_divideByZero } from '../utils/CHECK_divideByZero.js'
+import { CHECK_firstEntry } from '../utils/CHECK_firstEntry.js'
+import { CHECK_secondPlusEntry } from '../utils/CHECK_secondPlusEntry.js'
 
 // ICONS
 import divide from '../assets/mathSymbols/divide.svg'
@@ -39,31 +41,40 @@ function ButtonContainer(
         const operations = ['*','-','/','+']
 
         // Edge Case
-        if(!divideByZero(history, item)) {
+        if(
+            CHECK_divideByZero(history, item)
+        ) {
             setHistory(history.slice(0, -1))
             alert('Unable to divide by 0')
             return
         }
 
-        // Main Logic
-        if (
-            history === `` && !result && !operations.includes(item)
-        ) { // Entry #1
+        // Entry #1
+        if(
+            CHECK_firstEntry(item, history, result, operations)
+        ) { 
             setHistory(`${item}`)
-        } else if (
+            return
+        } 
+        
+        // Entry #2+
+        if (
             history !== ``
-        ) { // Entry #2+
+        ) { 
             if (
-                operations.includes(history.charAt(history.length - 1)) &&
-                operations.includes(item)
-            ) { // Back to back operations entered
+                CHECK_secondPlusEntry(item, history, operations)
+            ) {
+                setHistory(`${history}${item}`)
                 return
             } else {
-                setHistory(`${history}${item}`)
+                return
             }
-        } else if (
+        } 
+        
+        // Extend Result 
+        if (
             history === `` && result
-        ) { // Extend Result 
+        ) { 
             if (
                 !operations.includes(history.charAt(history.length - 1)) &&
                 !operations.includes(item)
@@ -72,6 +83,7 @@ function ButtonContainer(
             } else {
                 setHistory(`${result}${item}`)
             }
+            return
         }
     }
 
