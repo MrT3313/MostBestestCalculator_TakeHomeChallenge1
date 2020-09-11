@@ -14,6 +14,16 @@
 | [equal](https://www.flaticon.com/free-icon/equal_56751?term=equal%20sign&page=1&position=9) | flaticon.com | [Freepik](https://www.flaticon.com/authors/freepik) |
 
 # Versions
+
+TODO: 
+1. Keyboard Number Inputs
+
+
+<details open>
+<summary>0.2.0 - Testing Update</summary>
+
+- 
+</details>
 <details open>
 <summary>0.1.1 - Post Project Presentation Update</summary>
 

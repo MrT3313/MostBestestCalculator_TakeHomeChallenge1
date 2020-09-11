@@ -10,9 +10,14 @@ import '../styles/ResultScreen.css'
 // __MAIN__
 function ResultScreen({result, history}) {
     return (
-        <div className='ResultScreen'>
+        <div 
+            className='ResultScreen'
+            data-testid='ResultScreen'
+        >
             <History history={history}/>
-            <div>
+            <div
+                data-testid='ResultOutput'
+            >
                 {result ? result : 0}
             </div>
         </div>

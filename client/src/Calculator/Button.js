@@ -5,9 +5,11 @@ import React from 'react'
 
 // __MAIN__
 function Button({num, onClick}) {
+    const className = num === 0  ? 'NumButton zero' : 'NumButton'
     return (
         <button 
-            className={num === 0  ? 'Button zero' : 'Button'}
+            className={className}
+            data-testid={className}
             onClick={() => onClick(num)}
         >
             {num}

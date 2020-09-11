@@ -87,7 +87,10 @@ function ButtonContainer(
 
     // Return
     return (
-        <div className='ButtonContainer'>
+        <div 
+            className='ButtonContainer'
+            data-testid='ButtonContainer'
+        >
             <ActionButton operation={['clear', 'C', ]} onClick={clear}/>
             <ActionButton operation={['divide', '/', divide]} onClick={onClick}/>
 
