@@ -1,6 +1,6 @@
 @import './index.css';
 
-.Button {
+.ActionButton, .NumButton {
     display: grid;
     align-items: center;
     

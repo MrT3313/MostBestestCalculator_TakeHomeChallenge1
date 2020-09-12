@@ -12,7 +12,10 @@ function History({history}) {
 
     // Return
     return (
-        <div className='History'>
+        <div 
+            className='History'
+            data-testid='History'
+        >
             {history}
         </div>
     )

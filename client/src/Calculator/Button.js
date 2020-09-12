@@ -7,7 +7,7 @@ import React from 'react'
 function Button({num, onClick}) {
     return (
         <button 
-            className={num === 0  ? 'Button zero' : 'Button'}
+            className={num === 0  ? 'NumButton zero' : 'NumButton'}
             onClick={() => onClick(num)}
         >
             {num}

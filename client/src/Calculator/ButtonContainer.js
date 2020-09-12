@@ -7,6 +7,12 @@ import React from 'react'
 import Button from './Button.js'
 import ActionButton from './ActionButton.js'
 
+// FUNCTIONS
+// import { CHECK_divideByZero } from '../utils/CHECK_divideByZero.js'
+// import { CHECK_firstEntry } from '../utils/CHECK_firstEntry.js'
+// import { CHECK_secondPlusEntry } from '../utils/CHECK_secondPlusEntry.js'
+import { updateHistoryString } from '../utils/updateHistoryString.js'
+
 // ICONS
 import divide from '../assets/mathSymbols/divide.svg'
 import multiply from '../assets/mathSymbols/multiply.svg'
@@ -31,47 +37,10 @@ function ButtonContainer(
     }
 
     // - 2 - //
-    const onClick = (item) => {
-        // Variables
-        const operations = ['*','-','/','+']
-
-        // Edge Case
-        if (
-            history.charAt(history.length - 1) === '/' &&
-            item === 0
-        ) {
-            setHistory(history.slice(0, -1))
-            alert('Unable to divide by 0')
-            return
-        }
-
-        // Main Logic
-        if (
-            history === `` && !result && !operations.includes(item)
-        ) { // Entry #1
-            setHistory(`${item}`)
-        } else if (
-            history !== ``
-        ) { // Entry #2+
-            if (
-                operations.includes(history.charAt(history.length - 1)) &&
-                operations.includes(item)
-            ) { // Back to back operations entered
-                return
-            } else {
-                setHistory(`${history}${item}`)
-            }
-        } else if (
-            history === `` && result
-        ) { // Extend Result 
-            if (
-                !operations.includes(history.charAt(history.length - 1)) &&
-                !operations.includes(item)
-            ) { // Back to back operations entered
-                return
-            } else {
-                setHistory(`${result}${item}`)
-            }
+    const onClick = item => {
+        const updatedHistoryString = updateHistoryString(item, history, result)
+        if (updatedHistoryString) {
+            setHistory(updatedHistoryString)
         }
     }
 
@@ -88,26 +57,26 @@ function ButtonContainer(
     // Return
     return (
         <div className='ButtonContainer'>
-            <ActionButton operation={['C', ]} onClick={clear}/>
-            <ActionButton operation={['/', divide]} onClick={onClick}/>
+            <ActionButton operation={['clear', 'C', ]} onClick={clear}/>
+            <ActionButton operation={['divide', '/', divide]} onClick={onClick}/>
 
             <Button num={7} onClick={onClick}/>
             <Button num={8} onClick={onClick}/>
             <Button num={9} onClick={onClick}/>
-            <ActionButton operation={['*', multiply]} onClick={onClick}/>
+            <ActionButton operation={['multiply', '*', multiply]} onClick={onClick}/>
 
             <Button num={4} onClick={onClick}/>
             <Button num={5} onClick={onClick}/>
             <Button num={6} onClick={onClick}/>
-            <ActionButton operation={['-', minus]} onClick={onClick}/>
+            <ActionButton operation={['subtract', '-', minus]} onClick={onClick}/>
 
             <Button num={1} onClick={onClick}/>
             <Button num={2} onClick={onClick}/>
             <Button num={3} onClick={onClick}/>
-            <ActionButton operation={['+', plus]} onClick={onClick}/>
+            <ActionButton operation={['add', '+', plus]} onClick={onClick}/>
 
             <Button num={0} onClick={onClick}/>
-            <ActionButton operation={['=', equal]} onClick={() => calculate(history)}/>
+            <ActionButton operation={['equals', '=', equal]} onClick={() => calculate(history)}/>
         </div>
     )
 }
