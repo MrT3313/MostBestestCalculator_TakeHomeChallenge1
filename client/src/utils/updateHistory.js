@@ -5,13 +5,9 @@ import { CHECK_backToBackOperators } from '../utils/CHECK_backToBackOperators.js
 // __MAIN__
 export const updateHistory = (
     item,
-    history, setHistory,
+    history, 
     result,
 ) => {
-    console.log('item', item)
-    console.log('history', history )
-    // console.log('setHistory', setHistory)
-    console.log('result', result)
 /* 
     Edge Cases:
         1. Back-to-Back Operators
@@ -36,13 +32,12 @@ export const updateHistory = (
     // Edge Cases
     console.log(CHECK_backToBackOperators(item, history, operations))
     if (CHECK_backToBackOperators(item, history, operations)) {
-        return
+        return false
     }
     console.log(CHECK_divideByZero(history, item))
     if (CHECK_divideByZero(history, item)) {
-        setHistory(history.slice(0, -1))
         alert('Unable to divide by 0')
-        return  
+        return `${history.slice(0, -1)}`
     }
 
     // - 1 - // First Entry
@@ -51,9 +46,7 @@ export const updateHistory = (
         result === false &&
         !operations.includes(item)
     ) {
-        console.log('FIRST ENTRY')
-        setHistory(`${item}`)
-        return
+        return `${item}`
     }
 
     // - 2 - // Second+ Entry
@@ -61,8 +54,7 @@ export const updateHistory = (
         history !== ''
     ) {
         console.log('SECOND ENTRY')
-        setHistory(`${history}${item}`)
-        return
+        return `${history}${item}`
     }
 
     // - 3 - // Extend Result
@@ -71,7 +63,6 @@ export const updateHistory = (
         result !== false
     ) {
         console.log('EXTEND RESULT')
-        setHistory(`${result}${item}`)
-        return
+        return `${result}${item}`
     }
 }

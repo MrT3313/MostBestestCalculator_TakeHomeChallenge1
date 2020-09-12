@@ -2,7 +2,7 @@
 import React from 'react'
 import { render, cleanup } from '@testing-library/react'
 
-// COMPONENTS
+// FUNCTIONS
 import { CHECK_divideByZero } from './CHECK_divideByZero.js'
 
 // TESTS

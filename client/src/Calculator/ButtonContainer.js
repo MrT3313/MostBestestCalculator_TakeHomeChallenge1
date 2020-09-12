@@ -37,11 +37,11 @@ function ButtonContainer(
     }
 
     // - 2 - //
-    const onClick = (item) => {
-        // Variables
-        const operations = ['*','-','/','+']
-
-        updateHistory( item, history, setHistory, result)
+    const onClick = item => {
+        const updatedString = updateHistory(item, history, result)
+        if (updatedString) {
+            setHistory(updatedString)
+        }
     }
 
     // - 3 - //
