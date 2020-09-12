@@ -10,12 +10,13 @@ afterEach(cleanup)
 
 const operations = ['*','-','/','+']
 
-test('UTILS > CHECK_firstEntry: FAIL => Back-to-Back Operations', () => {
+test('UTILS > CHECK_backToBackOperators => true', () => {
     expect(CHECK_backToBackOperators('/', '2+', operations)).toBe(true)
     expect(CHECK_backToBackOperators('*', '2/', operations)).toBe(true)
     expect(CHECK_backToBackOperators('+', '2-', operations)).toBe(true)
     expect(CHECK_backToBackOperators('-', '2+', operations)).toBe(true)
 })
-test('UTILS > CHECK_firstEntry: PASS', () => {
+test('UTILS > CHECK_backToBackOperators => => false', () => {
     expect(CHECK_backToBackOperators('2', '2+', operations)).toBe(false)
+    expect(CHECK_backToBackOperators('4', '2/', operations)).toBe(false)
 })

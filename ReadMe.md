@@ -14,10 +14,6 @@
 | [equal](https://www.flaticon.com/free-icon/equal_56751?term=equal%20sign&page=1&position=9) | flaticon.com | [Freepik](https://www.flaticon.com/authors/freepik) |
 
 # Versions
-TODO: 
-- Keyboard Number Inputs
-
-
 <details open>
 <summary>0.2.0 - Testing Update / Update History Logic Overhaul with Util Functions</summary>
 
@@ -38,14 +34,15 @@ TODO:
             1. Edge Cases extracted to own util functions (see below)
             2. Is now a pure function => returning a new (non mutated) `updatedHistoryString` or `false` if no changes were made
             3. Main Cases (First Entry / Second+ Entry / Extend Result) no longer nested in complicated single if statement. Each case it returning as soon as the `updatedHistoryString` is made
-        - Tests:
-            - test suite covering default and all main cases
+        - Tests: ✅
     2. `CHECK_backToBackOperators`
         - First edge case in `UpdateHistoryString`
         - returns `true` if user is trying to enter back to back operators
+        - Tests: ✅
     3. `CHECK_divideByZero`
         - Second edge case in `UpdateHistoryString`
         - returns `true` and throws an alert if user is trying to divide by zero
+        - Tests: ✅
 </details>
 <details>
 <summary>0.1.1 - Post Project Presentation Update</summary>
