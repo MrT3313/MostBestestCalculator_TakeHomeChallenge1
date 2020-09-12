@@ -7,14 +7,12 @@ import '../styles/button.css'
 // __MAIN__
 function ActionButton({operation, onClick}) {
     // operation prop: [altImgText, symbol, svg]
-
-    const className =   operation[1] === 'C' ? 'ActionButton clear' : 
-                        operation[1] === '=' ? 'ActionButton equals' :
-                            'ActionButton'
     return (
         <button 
-            className={className}
-            data-testid={className}
+            className={ operation[1] === 'C' ? 'ActionButton clear' : 
+                        operation[1] === '=' ? 'ActionButton equals' :
+                            'ActionButton'
+            }
             onClick={() => onClick(operation[1])}
         >
             {operation.length === 3 ? 

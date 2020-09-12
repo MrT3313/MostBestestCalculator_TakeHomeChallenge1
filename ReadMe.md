@@ -14,19 +14,40 @@
 | [equal](https://www.flaticon.com/free-icon/equal_56751?term=equal%20sign&page=1&position=9) | flaticon.com | [Freepik](https://www.flaticon.com/authors/freepik) |
 
 # Versions
-
 TODO: 
-1. Keyboard Number Inputs
+- Keyboard Number Inputs
 
 
 <details open>
-<summary>0.2.0 - Testing Update</summary>
+<summary>0.2.0 - Testing Update / Update History Logic Overhaul with Util Functions</summary>
 
-1. `<App />` => Renders w/o crashing
-2. `<History />` => Initial textContent === `''`
-3. `<ResultScreen />` => Initial textContent == `'0'`
+1. `<App />`
+    - Tests: 
+        1. Renders w/o crashing
+2. `<History />`
+    - Added: `data-testid`
+    - Tests:
+        1. Initial textContent === `''`
+3. `<ResultScreen />` 
+    - Added: `data-testid`
+    - Tests: 
+        1. Initial textContent === `'0'`
+4. Util Functions
+    1. `updateHistoryString`
+        - Logic Overhaul
+            1. Edge Cases extracted to own util functions (see below)
+            2. Is now a pure function => returning a new (non mutated) `updatedHistoryString` or `false` if no changes were made
+            3. Main Cases (First Entry / Second+ Entry / Extend Result) no longer nested in complicated single if statement. Each case it returning as soon as the `updatedHistoryString` is made
+        - Tests:
+            - test suite covering default and all main cases
+    2. `CHECK_backToBackOperators`
+        - First edge case in `UpdateHistoryString`
+        - returns `true` if user is trying to enter back to back operators
+    3. `CHECK_divideByZero`
+        - Second edge case in `UpdateHistoryString`
+        - returns `true` and throws an alert if user is trying to divide by zero
 </details>
-<details open>
+<details>
 <summary>0.1.1 - Post Project Presentation Update</summary>
 
 Today I presented this weeks project to two of Lambda School's engineers as well as some other students. After I walked through the project they had some feedback which I have encorporated into this update! 
@@ -66,25 +87,7 @@ While the `scotch.io` challenge only asks to create the calculator layout using 
         2. Update `result` state
         3. Reset `history` state
 </details>
-<details open>
-<summary>0.1.0 - Calculation Logic</summary>
-
-While the `scotch.io` challenge only asks to create the calculator layout using `CSS Grid` I chose to add the actual calculation functionality! To do this I used `React Hooks` to add & track the state of a user's calculations.  
-
-1. Added `<History />` component to `<ResultScreen />`
-    - Tracks & displays button clicks through the `history` state prior to calculation
-2. `<Calculator />`
-    - `result` & `history` state being passed to `<ResultScreen />`
-    -  `result`, `setResult` & `history`, `setHistory` state being passed to `<ButtonContainer />` 
-3. `<ButtonContainer />` holds all calculation logic
-    - `clear` => Resets `history` & `result` state 
-    - `click` => Updates `history` state string
-    - `calculate` => uses Javascript `eval()` to: 
-        1. Calculate result from passed `history` state 
-        2. Update `result` state
-        3. Reset `history` state
-</details>
-<details open>
+<details>
 <summary>0.0.4 - CSS Grid Layout</summary>
 
 **Challenge Complete**

@@ -11,7 +11,7 @@ import ActionButton from './ActionButton.js'
 // import { CHECK_divideByZero } from '../utils/CHECK_divideByZero.js'
 // import { CHECK_firstEntry } from '../utils/CHECK_firstEntry.js'
 // import { CHECK_secondPlusEntry } from '../utils/CHECK_secondPlusEntry.js'
-import { updateHistory } from '../utils/updateHistory.js'
+import { updateHistoryString } from '../utils/updateHistoryString.js'
 
 // ICONS
 import divide from '../assets/mathSymbols/divide.svg'
@@ -38,9 +38,9 @@ function ButtonContainer(
 
     // - 2 - //
     const onClick = item => {
-        const updatedString = updateHistory(item, history, result)
-        if (updatedString) {
-            setHistory(updatedString)
+        const updatedHistoryString = updateHistoryString(item, history, result)
+        if (updatedHistoryString) {
+            setHistory(updatedHistoryString)
         }
     }
 
@@ -56,10 +56,7 @@ function ButtonContainer(
 
     // Return
     return (
-        <div 
-            className='ButtonContainer'
-            data-testid='ButtonContainer'
-        >
+        <div className='ButtonContainer'>
             <ActionButton operation={['clear', 'C', ]} onClick={clear}/>
             <ActionButton operation={['divide', '/', divide]} onClick={onClick}/>
 
