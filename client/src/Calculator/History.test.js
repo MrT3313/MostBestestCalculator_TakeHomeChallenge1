@@ -6,7 +6,7 @@ import { render, cleanup } from '@testing-library/react'
 import History from './History.js'
 
 // TESTS
-afterEach(cleanup) // Unmounts everything from the DOM after each test to the next test has a clean slate
+afterEach(cleanup)
 
 test('<History />', () => {
     const { debug, getByTestId } = render(<History />)

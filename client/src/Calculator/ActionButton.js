@@ -13,6 +13,7 @@ function ActionButton({operation, onClick}) {
                         operation[1] === '=' ? 'ActionButton equals' :
                             'ActionButton'
             }
+            data-testid={`ActionButton_${operation[1]}`}
             onClick={() => onClick(operation[1])}
         >
             {operation.length === 3 ? 
