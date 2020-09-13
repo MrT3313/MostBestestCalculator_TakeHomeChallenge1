@@ -19,7 +19,7 @@ Through this project I hope to expand my testing capabilities with React Testing
 
 1. `<ActionButton />`
     - Added data-testid: `ActionButton_${actionSymbol}`
-2. `<Buttton />`
+2. `<Button />`
     - Added data-testid: `NumButton_${num}`
 3. Calculator > index.js => `<Calculator />`
     - Testing calculator functionality => all buttons clicked and the resulting `<History />` & `<ResultScreen />` values confirmed.
