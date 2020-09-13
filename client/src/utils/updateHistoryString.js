@@ -25,6 +25,10 @@ export const updateHistoryString = (
             history === ''
             result !== false
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cf098e60d0a63d03ccac3e09274891b759fd0763
     Return:
         new (non mutated) history string || false
 */
