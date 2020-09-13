@@ -3,7 +3,7 @@ This is the first take home challenge given out by Lambda's engineering team to 
 
 Through this project I hope to expand my testing capabilities with React Testing Library and Jest. 
 
-💻 [Live Project](https://most-bestest-calculator.netlify.apps)
+💻 [Live Project](https://most-bestest-calculator.netlify.app)
 
 ## **THE CHALLENGE**
 - Task: Build a Calculator with CSS Grid
