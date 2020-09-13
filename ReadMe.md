@@ -1,17 +1,17 @@
-# Lambda Take Home Challenge - Week 1
-- Task: CSS Grid Calculator  
+# Most Bestest Calculator
+This is the first take home challenge given out by Lambda's engineering team to Lambda X students (students who have completed the program and are looking to land their first job in the industry). 
+
+Through this project I hope to expand my testing capabilities with React Testing Library and Jest. 
+
+💻 [Live Project](https://most-bestest-calculator.netlify.apps)
+
+## **THE CHALLENGE**
+- Task: Build a Calculator with CSS Grid
 - [Problem Link - Scotch.io](https://scotch.io/bar-talk/code-challenge-2-build-a-calculator-with-css-grid)   
 - Design Spec:   
 <img src="client/src/assets/ReadMe/DesignSpec.png" width='300'>
 
-# Assets
-| name | source | author | 
-| ---  | ---    | ---    |
-| [plus](https://www.flaticon.com/free-icon/add_1237946?term=plus&page=1&position=1) | flaticon.com | [srip](https://www.flaticon.com/authors/srip) | 
-| [minus](https://www.flaticon.com/free-icon/minus_1828901?term=minus&page=1&position=2) | flaticon.com | [Pixel Perfect](https://www.flaticon.com/authors/pixel-perfect) | 
-| [multiply](https://www.flaticon.com/free-icon/multiply-mathematical-sign_43823?term=multiply&page=1&position=2) | flaticon.com | [Freepik](https://www.flaticon.com/authors/freepik) |
-| [divide](https://www.flaticon.com/free-icon/divide_43097?term=divide&page=1&position=1) | flaticon.com | [Freepik](https://www.flaticon.com/authors/freepik) |
-| [equal](https://www.flaticon.com/free-icon/equal_56751?term=equal%20sign&page=1&position=9) | flaticon.com | [Freepik](https://www.flaticon.com/authors/freepik) |
+---
 
 # Versions
 <details>
@@ -145,9 +145,19 @@ Screenshot:
 - `<App/>` rendering 'Hello World' 
 </details>
 
+---
+
+# Assets
+| name | source | author | 
+| ---  | ---    | ---    |
+| [plus](https://www.flaticon.com/free-icon/add_1237946?term=plus&page=1&position=1) | flaticon.com | [srip](https://www.flaticon.com/authors/srip) | 
+| [minus](https://www.flaticon.com/free-icon/minus_1828901?term=minus&page=1&position=2) | flaticon.com | [Pixel Perfect](https://www.flaticon.com/authors/pixel-perfect) | 
+| [multiply](https://www.flaticon.com/free-icon/multiply-mathematical-sign_43823?term=multiply&page=1&position=2) | flaticon.com | [Freepik](https://www.flaticon.com/authors/freepik) |
+| [divide](https://www.flaticon.com/free-icon/divide_43097?term=divide&page=1&position=1) | flaticon.com | [Freepik](https://www.flaticon.com/authors/freepik) |
+| [equal](https://www.flaticon.com/free-icon/equal_56751?term=equal%20sign&page=1&position=9) | flaticon.com | [Freepik](https://www.flaticon.com/authors/freepik) |
+
 --- 
 Author: Reed Turgeon  
-Email: Turgeon.dev@gmail.com  
-GitHub: https://github.com/MrT3313  
+Email: Turgeon.dev@gmail.com    
 LinkedIn: https://www.linkedin.com/in/reedturgeon/  
 
