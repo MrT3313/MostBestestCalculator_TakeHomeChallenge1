@@ -25,7 +25,6 @@ export const updateHistoryString = (
             history === ''
             result !== false
 
-
     Return:
         new (non mutated) history string || false
 */

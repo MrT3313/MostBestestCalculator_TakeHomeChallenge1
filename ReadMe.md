@@ -14,8 +14,18 @@
 | [equal](https://www.flaticon.com/free-icon/equal_56751?term=equal%20sign&page=1&position=9) | flaticon.com | [Freepik](https://www.flaticon.com/authors/freepik) |
 
 # Versions
-<details open>
-<summary>0.2.0 - Testing Update / Update History Logic Overhaul with Util Functions</summary>
+<details>
+<summary>0.2.1 - Testing Update<summary>
+
+1. `<ActionButton />`
+    - Added data-testid: `ActionButton_${actionSymbol}`
+2. `<Buttton />`
+    - Added data-testid: `NumButton_${num}`
+3. Calculator > index.js => `<Calculator />`
+    - Testing calculator functionality => all buttons clicked and the resulting `<History />` & `<ResultScreen />` values confirmed.
+</details>
+<details>
+<summary>0.2.0 - Testing / Update History Logic Overhaul with Util Functions</summary>
 
 1. `<App />`
     - Tests: 

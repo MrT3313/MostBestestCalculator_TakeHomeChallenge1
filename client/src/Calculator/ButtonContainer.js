@@ -8,9 +8,6 @@ import Button from './Button.js'
 import ActionButton from './ActionButton.js'
 
 // FUNCTIONS
-// import { CHECK_divideByZero } from '../utils/CHECK_divideByZero.js'
-// import { CHECK_firstEntry } from '../utils/CHECK_firstEntry.js'
-// import { CHECK_secondPlusEntry } from '../utils/CHECK_secondPlusEntry.js'
 import { updateHistoryString } from '../utils/updateHistoryString.js'
 
 // ICONS
